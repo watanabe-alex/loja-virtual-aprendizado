@@ -14,47 +14,53 @@
 </head>
 <body>
     
-    <header class="d-flex justify-content-between align-items-center p-3">
+    <header class="navbar">
         <h1 id="logo">
             <?php echo $nomeSistema?>
         </h1>
         <nav>
             <ul class="nav">
-                <li class="nav-item"><a href="">Login</a></li>
-                <li class="nav-item"><a href="">Cursos</a></li>
-                <li class="nav-item"><a href="">Cadastrar</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Cadastrar</a></li>
             </ul>
         </nav>
     </header>
 
+    <main>
+        <section class="container mt-4">
+            <div class="row justify-content-around">
+                
+                <div class="col-lg-3 card text-center">
+                    <h2 class="card-title">Curso 1</h2>
+                    <img src="img/curso1.png" class="card-img-top" alt="..."/>  
+                    <div class="card-body">                
+                        <h5 class="card-text">R$ 15,00</h5>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+               
+                <div class="col-lg-3 card text-center">
+                    <h2 class="card-title">Curso 1</h2>
+                    <img src="img/curso1.png" class="card-img-top" alt="..."/>  
+                    <div class="card-body">                
+                        <h5 class="card-text">R$ 15,00</h5>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
 
+                <div class="col-lg-3 card text-center">
+                    <h2 class="card-title">Curso 1</h2>
+                    <img src="img/curso1.png" class="card-img-top" alt="..."/>  
+                    <div class="card-body">                
+                        <h5 class="card-text">R$ 15,00</h5>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
 
-
-
-
-<!-- COMENTADO - DADOS DA AULA (APRENDENDO)
-    <?php
-        $nome = "Alex Watanabe";
-        $idade = 10;
-        
-        $usuario = ["Alex","Watanabe",32,["musica","café","skate"]];
-        var_dump($usuario);
-
-        echo "<br>";
-        $usuario[] = "mais uma variável"; //adiciona a informação no final
-        var_dump($usuario);
-
-        echo "<br>";
-        echo "<h1>".$usuario[0]." ".$usuario[1]."</h1>";
-
-        $usuario2 = ["nome"=>"Alex","sobrenome"=>"Watanabe"];
-
-    
-        echo "Meu nome é $nome e eu tenho $idade anos.";
-        //var_dump($usuario2["sobrenome"]); 
-    ?>
--->
-
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
