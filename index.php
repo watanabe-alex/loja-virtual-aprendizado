@@ -1,5 +1,6 @@
 <?php
-    $nomeSistema = "Cursos do Alex"
+    $nomeSistema = "Cursos do Alex";
+    $usuario = ["nome"=>"Alex Watanabe"];
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +21,23 @@
         </h1>
         <nav>
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Cadastrar</a></li>
+
+                <?php if(isset($usuario) && $usuario!=[]) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Olá <?php echo $usuario["nome"]; ?></a>
+                    </li>
+                <?php } else {?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cadastro</a>
+                    </li>
+                <?php }?>
+
             </ul>
         </nav>
     </header>
