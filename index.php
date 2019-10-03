@@ -25,7 +25,7 @@
     
     <header>
         <div class="navbar">
-            <h1 id="logo">
+            <h1>
                 <?php echo $nomeSistema?>
             </h1>
             <nav>
