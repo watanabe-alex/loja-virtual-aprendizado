@@ -1,15 +1,9 @@
 <?php
     $nomeSistema = "Cursos do Alex";
     $usuario = ["nome"=>"Alex Watanabe"];
-    $produtos = [
-        ["nome"=>"Curso Front-End", "preco"=>1200.00, "curacao"=>"5 meses", "img"=>"img/fe.png"],
-        ["nome"=>"Curso PHP", "preco"=>1000.00, "duracao"=>"3 meses", "img"=>"img/php.png"],
-        ["nome"=>"Curso Python", "preco"=>3000.00, "duracao"=>"6 meses", "img"=>"img/python.png"],
-        ["nome"=>"Curso Django", "preco"=>2500.00, "duracao"=>"2 meses", "img"=>"img/django.png"],
-        ["nome"=>"Curso Laravel", "preco"=>1500.00, "duracao"=>"3 meses", "img"=>"img/laravel.png"]
-    ];
     $categorias = ["Cursos", "Palestras", "Artigos"];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -65,32 +59,29 @@
 
     </header>
 
-
-
     <main>
-        <section class="container mt-4">
-            <div class="row justify-content-around">
-                
-                <?php if(isset($produtos) && $produtos != []){?> <!-- se existir produto -->
-
-                    <!-- imprime todos os produtos do array na tela -->
-                    <?php foreach ($produtos as $produto) {?>
-                        <div class="col-lg-3 card text-center">
-                            <h2 class="card-title"><?php echo $produto["nome"];?></h2>
-                            <img src=<?php echo $produto["img"]?> class="card-img-top" alt="..."/>  
-                            <div class="card-body">                
-                                <h5 class="card-text"><?php echo number_format($produto["preco"],2,',','.')?></h5>
-                                <a href="carrinho.php?nomeProduto=<?php echo $produto["nome"];?>" class="btn btn-primary">Comprar</a>
-                            </div>
+        <section class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Carrinho de Compras</h1>
+                </div>
+                <div class="col-12">
+                    <div class="row card">
+                        <div class="col-12">
+                            <h3>Você está comprando o <?php echo $_GET["nomeProduto"]; ?></h3>
                         </div>
-                    <?php }?>
-
-                <?php }else{ ?> <!-- se não existir produto -->
-
-                    <h2>Não existem produtos cadastrados :(</h2>
-
-                <?php } ?>
-
+                        <div class="col-lg-6 col-md-6">
+                            <form class="d-flex flex-column p-3" method="post" action="sucesso.php">
+                                <input type="text" name="nomeCompleto" placeholder="Digite seu nome">
+                                <input type="text" name="cpf" placeholder="Digite seu CPF">
+                                <input type="number" name="cartao" placeholder="Digite o número do seu cartão">
+                                <input type="date" name="validadeCartao" placeholder="Digite a data de validade">
+                                <input type="password" name="codigoCartao" placeholder="Digite o CVV">
+                                <button class="btn btn-success" type="submit">Finalizar compra</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>   
             </div>
         </section>
     </main>
