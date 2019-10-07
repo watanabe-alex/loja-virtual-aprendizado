@@ -1,63 +1,16 @@
-<?php
-    $nomeSistema = "Cursos do Alex";
-    $usuario = ["nome"=>"Alex Watanabe"];
-    $categorias = ["Cursos", "Palestras", "Artigos"];
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Carrinho</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
     
-    <header>
-        <div class="navbar">
-            <h1>
-                <?php echo $nomeSistema?>
-            </h1>
-            <nav>
-                <ul class="nav">
-
-                    <?php if(isset($usuario) && $usuario!=[]) { ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cursos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Olá <?php echo $usuario["nome"]; ?></a>
-                        </li>
-                    <?php } else {?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cadastro</a>
-                        </li>
-                    <?php }?>
-
-                </ul>
-            </nav>
-        </div>
-
-        <nav class="navbar bg-dark">
-            <ul class="nav">
-                <?php if(isset($categorias) && $categorias != []){?> <!-- se existir categorias -->
-                    <?php foreach ($categorias as $categoria) {?>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"><?php echo $categoria ?></a>
-                        </li>
-                    <?php } ?>
-                <?php } ?>
-            </ul>
-        </nav>
-
-    </header>
+    <?php include("header.php"); ?>
 
     <main>
         <section class="container">
