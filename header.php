@@ -1,4 +1,4 @@
-<?php include("config/variaveis.php"); ?>
+<?php include("variaveis.php"); ?>
 
 <header>
     <div class="navbar">
