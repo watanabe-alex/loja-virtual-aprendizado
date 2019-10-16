@@ -1,6 +1,9 @@
 <?php
+
+    session_start();
+
     $nomeSistema = "Cursos do Alex";
-    $usuario = ["nome"=>"Alex Watanabe"];
+    $usuario = isset($_SESSION["usuario"]) ? $_SESSION["usuario"] : ""; //["nome"=>"Alex Watanabe"];
 
     // $produtos = [
     //     ["nome"=>"Curso Front-End", "preco"=>1200.00, "curacao"=>"5 meses", "img"=>"img/fe.png"],
@@ -14,7 +17,4 @@
 
     $categorias = ["Cursos", "Palestras", "Artigos"];
 
-    $nomeSistema = "Cursos do Alex";
-    $usuario = ["nome"=>"Alex Watanabe"];
-    $categorias = ["Cursos", "Palestras", "Artigos"];
 ?>

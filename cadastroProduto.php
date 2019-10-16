@@ -35,7 +35,8 @@
         //salvando arquivo imagem
         $nomeImg = $_FILES["imgProduto"]["name"];
         $localTmp = $_FILES["imgProduto"]["tmp_name"];
-        $caminhoSalvo = "img/".$nomeImg;
+        $dataAtual = date("Ymd");
+        $caminhoSalvo = "img/".$dataAtual.$nomeImg;
 
         $deuCerto = move_uploaded_file($localTmp, $caminhoSalvo);
         //exit;

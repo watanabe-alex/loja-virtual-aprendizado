@@ -11,7 +11,7 @@
 <body>
     
     <?php include("header.php"); ?>
-
+    
     <main>
         <section class="container mt-4">
             <div class="row justify-content-around">
@@ -25,6 +25,7 @@
                             <img src=<?php echo $produto["imagem"]?> class="card-img-top" alt="..."/>  
                             <div class="card-body">                
                                 <h5 class="card-text"><?php echo number_format($produto["preco"],2,',','.')?></h5>
+                                <p><?php echo $produto["desc"] ?></p>
                                 <a href="carrinho.php?nomeProduto=<?php echo $produto["nome"];?>" class="btn btn-primary">Comprar</a>
                             </div>
                         </div>
