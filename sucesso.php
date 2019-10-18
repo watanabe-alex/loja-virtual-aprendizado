@@ -11,7 +11,7 @@
 <body>
 
     <?php
-        include("header.php"); 
+        include_once("header.php"); 
         include("config/validacoes.php");
         
         //pegando informações do formulário

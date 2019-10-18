@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <?php include("header.php"); ?>
+    <?php include_once("header.php"); ?>
 
     <main>
         <section class="container">
